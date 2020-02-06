@@ -1,4 +1,4 @@
-package com.jntm.a_创建和销毁对象;
+package com.jntm.a_创建和销毁对象.用静态工厂方法代替构造器;
 
 import java.time.Instant;
 import java.util.Date;
