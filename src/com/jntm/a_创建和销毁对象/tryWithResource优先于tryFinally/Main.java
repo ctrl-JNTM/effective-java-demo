@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     //❌
-    //简洁 清晰  异常会覆盖，例如：br.close();的异常会覆盖bw.append(str);的异常
+    //非简洁清晰  异常会覆盖，例如：br.close();的异常会覆盖bw.append(str);的异常
     public static void readFalse(String inputPath, String outputPath) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(inputPath));
         try {
