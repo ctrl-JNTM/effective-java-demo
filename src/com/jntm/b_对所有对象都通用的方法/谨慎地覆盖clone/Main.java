@@ -18,7 +18,7 @@ public class Main {
         //💡cloneable架构与引用可变对象的final域的正常用法是相互冲突的,除非原对象和克隆对象中此变量可以共享，否贼为了使类可以被克隆，有必要从某些域中去掉final修饰符
         private final String species = "cat";
         private String name;
-        private List<String> age;
+        private List<String> families;
 
         public String getSpecies() {
             return species;
@@ -37,12 +37,12 @@ public class Main {
             return friends;
         }
 
-        public List<String> getAge() {
-            return age;
+        public List<String> getFamilies() {
+            return families;
         }
 
-        public Cat setAge(List<String> age) {
-            this.age = age;
+        public Cat setFamilies(List<String> families) {
+            this.families = families;
             return this;
         }
 
@@ -52,7 +52,7 @@ public class Main {
                     "friends=" + Arrays.toString(friends) +
                     ", species='" + species + '\'' +
                     ", name='" + name + '\'' +
-                    ", age=" + age +
+                    ", age=" + families +
                     '}';
         }
 
@@ -70,7 +70,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Cat cat = new Cat().setName("可乐").setAge(new ArrayList<>());
+        Cat cat = new Cat().setName("可乐").setFamilies(new ArrayList<>());
         Cat cat1 = cat.clone();
         System.out.println(cat);
         System.out.println(cat1);
@@ -78,8 +78,6 @@ public class Main {
         System.out.println(cat.getFriends() == cat1.getFriends());
         System.out.println(cat.getName() == cat1.getName());
         System.out.println(cat.getSpecies() == cat1.getSpecies());
-        System.out.println(cat.getAge() == cat1.getAge());
-
-
+        System.out.println(cat.getFamilies() == cat1.getFamilies());
     }
 }
